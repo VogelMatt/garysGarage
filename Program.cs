@@ -29,7 +29,7 @@ namespace Garage
             Console.WriteLine("Electric Vehicles");
             foreach (IElectricVehicle ev in electricVehicles)
             {
-                Console.WriteLine($"{ev.CurrentChargePercentage}");
+                Console.WriteLine($"the {ev} battery's current charge is {ev.CurrentChargePercentage}");
             }
 
             foreach (IElectricVehicle ev in electricVehicles)
@@ -40,12 +40,15 @@ namespace Garage
 
             foreach (IElectricVehicle ev in electricVehicles)
             {
-                Console.WriteLine($"{ev.CurrentChargePercentage}");
+                Console.WriteLine($"the {ev} battery has been charged to {ev.CurrentChargePercentage}");
             }
 
             /***********************************************/
 
-            Ram ram = new Ram();
+            Ram ram = new Ram()
+            {
+                CurrentTankPercentage = 18
+            };
             Cessna cessna150 = new Cessna();
 
             List <???> gasVehicles = new List<???> () {
